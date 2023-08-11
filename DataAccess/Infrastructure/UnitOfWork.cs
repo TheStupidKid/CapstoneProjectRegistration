@@ -21,5 +21,10 @@ namespace DataAccess.Infrastructure
         {
             get { return context ?? (context = _dbFactory.Init()); }
         }
+
+        public void SaveChange()
+        {
+            context.SaveChanges();  
+        }
     }
 }

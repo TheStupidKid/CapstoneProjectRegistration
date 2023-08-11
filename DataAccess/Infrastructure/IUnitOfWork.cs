@@ -8,6 +8,6 @@ namespace DataAccess.Infrastructure
 {
     public interface IUnitOfWork
     {
-        
+        public void SaveChange();   
     }
 }
