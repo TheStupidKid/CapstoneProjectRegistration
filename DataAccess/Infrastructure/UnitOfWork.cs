@@ -1,4 +1,5 @@
 ﻿using BussinessObject.Models;
+using DataAccess.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,12 @@ namespace DataAccess.Infrastructure
     {
         private readonly IDbFactory _dbFactory;
         private CapstoneRegistrationContext context;
+        private readonly IStudentRepository _studentRepository;
 
-        public UnitOfWork(IDbFactory dbFactory)
+        public UnitOfWork(IDbFactory dbFactory, IStudentRepository studentRepository)
         {
             _dbFactory = dbFactory;
+            _studentRepository=studentRepository;
         }
 
         public CapstoneRegistrationContext DbContext
@@ -26,5 +29,6 @@ namespace DataAccess.Infrastructure
         {
             context.SaveChanges();  
         }
+        public IStudentRepository StudentRepository => _studentRepository;
     }
 }

@@ -19,35 +19,33 @@ namespace Service
     }
     public class StudentService : IStudentService
     {
-        private readonly IStudentRepository studentRepository;
         private readonly IUnitOfWork unitOfWork;
 
-        public StudentService(IStudentRepository studentRepository, IUnitOfWork unitOfWork)
+        public StudentService(IUnitOfWork unitOfWork)
         {
-            this.studentRepository = studentRepository;
             this.unitOfWork = unitOfWork;
         }
 
         public IEnumerable<Student> GetStudents()
         {
-            var students = studentRepository.GetAll();
+            var students = unitOfWork.StudentRepository.GetAll();
             return students;
         }
 
         public Student GetStudent(int id)
         {
-            var student = studentRepository.GetById(id);
+            var student = unitOfWork.StudentRepository.GetById(id);
             return student;
         }
 
         public void CreateStudent(Student student)
         {
-            studentRepository.Add(student);
+            unitOfWork.StudentRepository.Add(student);
         }
 
         public void UpdateStudent(Student student)
         {
-            studentRepository.Update(student);
+            unitOfWork.StudentRepository.Update(student);
         }
     }
 }
