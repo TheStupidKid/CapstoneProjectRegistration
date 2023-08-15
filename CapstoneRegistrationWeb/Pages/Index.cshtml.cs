@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace CapstoneRegistrationWebApp.Pages
+namespace CapstoneRegistrationWeb.Pages
 {
     public class IndexModel : PageModel
     {

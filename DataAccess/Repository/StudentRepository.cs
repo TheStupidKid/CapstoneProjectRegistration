@@ -1,5 +1,6 @@
 ﻿using BussinessObject.Models;
 using DataAccess.Infrastructure;
+using DataAccess.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,6 @@ namespace DataAccess.Repository
 {
     public class StudentRepository : GenericRepository<Student>, IStudentRepository
     {
-        public StudentRepository(IDbFactory dbFactory) : base(dbFactory)
-        {
-        }
+        
     }
-
-    public interface IStudentRepository : IGenericRepository<Student> { }
 }

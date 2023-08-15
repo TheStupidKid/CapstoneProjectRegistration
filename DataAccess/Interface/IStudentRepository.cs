@@ -1,21 +1,15 @@
 ﻿using BussinessObject.Models;
 using DataAccess.Infrastructure;
-using DataAccess.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service
+namespace DataAccess.Interface
 {
-    public interface IStudentService
+    public interface IStudentRepository : IGenericRepository<Student>
     {
-        
 
-    }
-    public class StudentService : IStudentService
-    {
-        
     }
 }
