@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EJ10EVnDwvjUOhPLWTV6/bZcwJxbao6ZMiFY4iOeXEYqqHD/84Y/wzAMozoJXlH0AF65eBmbBClVNJnDPxkf9g==",
+  "dgSpecHash": "qAyHyix97/FhHygZDdPfJsNONNNp0A8IOMetvTFD2yXGrV3151D09JNohIworPygjIObuTkwKGcz76rkpN5Swg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\CapstoneProjectRegistrationWeb\\CapstoneProjectRegistrationWeb.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
