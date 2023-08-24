@@ -8,10 +8,10 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\BussinessObject\\BussinessObject.csproj",
-        "projectName": "BussinessObject",
+        "projectName": "DataAccess",
         "projectPath": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\BussinessObject\\BussinessObject.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\BussinessObject\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\BussinessObject\\BussinessObject.csproj": {
+                "projectPath": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\BussinessObject\\BussinessObject.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

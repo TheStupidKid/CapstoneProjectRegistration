@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{D8A3BC12-A3A4-46B8-977F-E11C41393EAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapstoneRegistrationWeb", "CapstoneRegistrationWeb\CapstoneRegistrationWeb.csproj", "{62661B9D-E3F9-4E48-B6C0-42CE4304A7ED}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{D8A3BC12-A3A4-46B8-977F-E11C41393EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8A3BC12-A3A4-46B8-977F-E11C41393EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8A3BC12-A3A4-46B8-977F-E11C41393EAC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62661B9D-E3F9-4E48-B6C0-42CE4304A7ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62661B9D-E3F9-4E48-B6C0-42CE4304A7ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62661B9D-E3F9-4E48-B6C0-42CE4304A7ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62661B9D-E3F9-4E48-B6C0-42CE4304A7ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
