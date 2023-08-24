@@ -15,6 +15,10 @@ namespace DataAccess.Infrastructure
         IGenericRepository<Lecture> lectureRepository { get; }
         IGenericRepository<Group> groupRepository { get; }
         IGenericRepository<StudentInGroup> studentInGroupRepository { get; }
+        IGenericRepository<Semester> semesterRepository { get; }
+        IGenericRepository<StudentInSemester> studentInSemesterRepository { get; }
+        IGenericRepository<TopicOfLecture> topicOfLectureRepository { get; }
+        IGenericRepository<TopicOfSemester> topicOfSemesterRepository { get; }
         void Save();
     }
 }

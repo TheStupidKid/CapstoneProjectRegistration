@@ -18,8 +18,16 @@ namespace DataAccess.Infrastructure
         public IGenericRepository<Group> groupRepository { get; }
         public IGenericRepository<Topic> topicRepository { get; }
         public IGenericRepository<Lecture> lectureRepository { get; }
-
         public IGenericRepository<StudentInGroup> studentInGroupRepository { get; }
+
+        public IGenericRepository<Semester> semesterRepository { get; }
+
+        public IGenericRepository<StudentInSemester> studentInSemesterRepository { get; }
+
+        public IGenericRepository<TopicOfLecture> topicOfLectureRepository { get; }
+
+        public IGenericRepository<TopicOfSemester> topicOfSemesterRepository { get; }
+
         public UnitOfWork(CapstoneRegistrationContext context)
         {
             _context = context;
@@ -27,6 +35,11 @@ namespace DataAccess.Infrastructure
             groupRepository = new GenericRepository<Group>(_context);
             topicRepository = new GenericRepository<Topic>(_context);
             lectureRepository = new GenericRepository<Lecture>(_context);
+            studentInGroupRepository = new GenericRepository<StudentInGroup>(_context);
+            semesterRepository = new GenericRepository<Semester>(_context);
+            studentInSemesterRepository = new GenericRepository<StudentInSemester>(_context);
+            topicOfLectureRepository = new GenericRepository<TopicOfLecture>(_context);
+            topicOfSemesterRepository = new GenericRepository<TopicOfSemester>(_context);
         }
         public void Save()
         {
