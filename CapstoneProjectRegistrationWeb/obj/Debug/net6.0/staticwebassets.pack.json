@@ -5,12 +5,48 @@
       "PackagePath": "staticwebassets\\CapstoneProjectRegistrationWeb.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\CapstoneProjectRegistrationWeb\\wwwroot\\css\\create_group.css",
+      "PackagePath": "staticwebassets\\css\\create_group.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\CapstoneProjectRegistrationWeb\\wwwroot\\css\\group_information.css",
+      "PackagePath": "staticwebassets\\css\\group_information.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\CapstoneProjectRegistrationWeb\\wwwroot\\css\\group_none.css",
+      "PackagePath": "staticwebassets\\css\\group_none.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\CapstoneProjectRegistrationWeb\\wwwroot\\css\\lecture.css",
+      "PackagePath": "staticwebassets\\css\\lecture.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\CapstoneProjectRegistrationWeb\\wwwroot\\css\\lecture_approve.css",
+      "PackagePath": "staticwebassets\\css\\lecture_approve.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\CapstoneProjectRegistrationWeb\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\CapstoneProjectRegistrationWeb\\wwwroot\\css\\register_topic.css",
+      "PackagePath": "staticwebassets\\css\\register_topic.css"
+    },
+    {
       "Id": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\CapstoneProjectRegistrationWeb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\CapstoneProjectRegistrationWeb\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\CapstoneProjectRegistrationWeb\\wwwroot\\image\\HCM-scaled.jpeg",
+      "PackagePath": "staticwebassets\\image\\HCM-scaled.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\CapstoneProjectRegistrationWeb\\wwwroot\\image\\Logo-FU-03.jpeg",
+      "PackagePath": "staticwebassets\\image\\Logo-FU-03.jpeg"
     },
     {
       "Id": "C:\\Users\\ADMIN\\source\\repos\\CapstoneProjectRegistration\\CapstoneProjectRegistrationWeb\\wwwroot\\js\\site.js",
