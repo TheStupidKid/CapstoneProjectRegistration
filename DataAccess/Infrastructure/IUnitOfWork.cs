@@ -10,7 +10,7 @@ namespace DataAccess.Infrastructure
 {
     public interface IUnitOfWork : IDisposable
     {
-        IGenericRepository<Student> studentRepository { get; }
+        IStudentRepository studentRepository { get; }
         IGenericRepository<Topic> topicRepository { get; }
         IGenericRepository<Lecture> lectureRepository { get; }
         IGenericRepository<Group> groupRepository { get; }

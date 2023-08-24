@@ -14,7 +14,7 @@ namespace DataAccess.Infrastructure
     {
         private readonly CapstoneRegistrationContext _context;
         private bool disposed = false;
-        public IGenericRepository<Student> studentRepository { get; }
+        public IStudentRepository studentRepository { get; private set; }
         public IGenericRepository<Group> groupRepository { get; }
         public IGenericRepository<Topic> topicRepository { get; }
         public IGenericRepository<Lecture> lectureRepository { get; }
@@ -31,7 +31,7 @@ namespace DataAccess.Infrastructure
         public UnitOfWork(CapstoneRegistrationContext context)
         {
             _context = context;
-            studentRepository = new GenericRepository<Student>(_context);
+            studentRepository = new StudentRepository(_context);
             groupRepository = new GenericRepository<Group>(_context);
             topicRepository = new GenericRepository<Topic>(_context);
             lectureRepository = new GenericRepository<Lecture>(_context);

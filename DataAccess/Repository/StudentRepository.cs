@@ -13,15 +13,18 @@ namespace DataAccess.Repository
 {
     public class StudentRepository : GenericRepository<Student>,IStudentRepository
     {
-        private readonly CapstoneRegistrationContext _context;
+        private readonly DbContext _context;
         private readonly DbSet<Student> _dbSet;
+        public StudentRepository(DbContext context) {
+            _context= context;
+        }
         public Student checkLogin(string email, string password)
         {
-            Student student = _dbSet.Where(s=>s.Email.Equals(email)).FirstOrDefault();
-            if(student == null || !BC.Verify(password,student.Password)) 
+            Student student = _context.Set<Student>().FirstOrDefault(e=>e.Email == email && e.Password==password);
+            /*if(student == null || !BC.Verify(password,student.Password)) 
             {
                 return null;
-            }
+            }*/
 
             return student;
         }

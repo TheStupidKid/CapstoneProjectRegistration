@@ -20,5 +20,10 @@ namespace DataAccess.Service
         {
             return unitOfWork.studentRepository.GetById(id);
         }
+
+        public Student Login(string email, string password)
+        {
+            return unitOfWork.studentRepository.checkLogin(email, password);
+        }
     }
 }
