@@ -25,7 +25,7 @@ namespace CapstoneProjectRegistrationWeb.Controllers
             return View(studentView);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Login()
         {
             return View();
         }

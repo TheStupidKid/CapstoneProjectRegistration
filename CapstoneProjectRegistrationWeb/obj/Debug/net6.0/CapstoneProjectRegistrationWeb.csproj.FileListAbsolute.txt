@@ -273,3 +273,4 @@ C:\Users\ADMIN\source\repos\CapstoneProjectRegistration\CapstoneProjectRegistrat
 C:\Users\ADMIN\source\repos\CapstoneProjectRegistration\CapstoneProjectRegistrationWeb\bin\Debug\net6.0\DataAccess.dll
 C:\Users\ADMIN\source\repos\CapstoneProjectRegistration\CapstoneProjectRegistrationWeb\bin\Debug\net6.0\DataAccess.pdb
 C:\Users\ADMIN\source\repos\CapstoneProjectRegistration\CapstoneProjectRegistrationWeb\bin\Debug\net6.0\BussinessObject.pdb
+C:\Users\ADMIN\source\repos\CapstoneProjectRegistration\CapstoneProjectRegistrationWeb\bin\Debug\net6.0\BCrypt.Net-Next.dll

@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+    Layout = "~/Views/Shared/_CustomLayout.cshtml";
+}
+@model LoginViewModel
+
+<main>
+    <div class="left-section">
+        <div class="logo">
+            <img class="logo-img" src="../image/Logo-FU-03.jpeg" alt="logo" />
+        </div>
+        <div class="login-content">
+            <h1 class="title">Welcome back</h1>
+            <form class="login-section-main" asp-action="Login" asp-controller="Home" asp-route-returnurl="@(Context.Request.Query["ReturnUrl"])" method="post">
+                <!-- Error message -->
+                @if (ViewBag.ErrorMessage != null)
+                {
+                            <div class="alert alert-warning" role="alert">
+                        @ViewBag.ErrorMessage
+                            </div>
+                }
+                <input type="email"
+                       class="email-input"
+                       id="email"
+                       name="email"
+                       placeholder="Email"
+                       asp-for="Email" required/>
+                <input type="password"
+                       id="password"
+                       name="password"
+                       class="password-input"
+                       placeholder="Password" 
+                       asp-for="Password" required/>
+          
+                <button type="submit" class="login-btn">Log in</button>
+                
+            </form>
+        </div>
+    </div>
+    <div class="right-section">
+        <div class="main-picture">
+            <img class="picture-cus" src="../image/HCM-scaled.jpeg" alt="hinh" />
+        </div>
+    </div>
+</main>

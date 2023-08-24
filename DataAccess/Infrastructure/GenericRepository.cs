@@ -10,8 +10,8 @@ namespace DataAccess.Infrastructure
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        protected readonly CapstoneRegistrationContext _context;
-        protected readonly DbSet<T> _dbSet;
+        private readonly CapstoneRegistrationContext _context;
+        private readonly DbSet<T> _dbSet;
 
         public GenericRepository()
         {

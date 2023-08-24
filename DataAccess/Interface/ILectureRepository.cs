@@ -10,5 +10,6 @@ namespace DataAccess.Interface
 {
     public interface ILectureRepository : IGenericRepository<Lecture>
     {
+        Lecture checkLogin(string email, string password);
     }
 }

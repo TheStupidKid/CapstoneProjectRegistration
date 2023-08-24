@@ -11,5 +11,7 @@ namespace DataAccess.Interface
     public interface IStudentRepository : IGenericRepository<Student>
     {
         Student checkLogin(string email, string password);
+        Student register(Student student);
+        Student getByStudentCode(string studentCode);   
     }
 }
