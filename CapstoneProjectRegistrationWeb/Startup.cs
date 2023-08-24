@@ -42,6 +42,10 @@ namespace CapstoneProjectRegistrationWeb
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped<StudentService>();
+            services.AddScoped<LectureService>();
+            services.AddScoped<GroupService>();
+            services.AddScoped<TopicService>();
+
 
             // Config login and access denied path
             services
