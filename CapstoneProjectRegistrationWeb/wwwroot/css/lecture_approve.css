@@ -200,6 +200,25 @@ table {
 .styled-table td {
   padding: 12px 15px;
 }
+.main-action button {
+    margin-bottom: 1rem;
+    margin-left: 12rem;
+    width: 5rem;
+    padding: 0.2rem 0.2rem;
+    border: none;
+    height: 2rem;
+    border-radius: 0.3rem;
+}
+
+    .main-action button:first-child {
+        background-color: #101727;
+        font-weight: bold;
+        color: white;
+    }
+
+    .main-action button:hover {
+        cursor: pointer;
+    }
 
 .styled-table tbody tr {
   border-bottom: 1px solid #dddddd;
@@ -219,13 +238,13 @@ table {
   padding-top: 4rem;
 }
 
-.main-action {
+.main-action1 {
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
 
-.main-action button {
+.main-action1 button {
   width: 5rem;
   padding: 0.2rem 0.2rem;
   border: none;
@@ -233,12 +252,12 @@ table {
   border-radius: 0.3rem;
 }
 
-.main-action button:first-child {
+.main-action1 button:first-child {
   background-color: #101727;
   font-weight: bold;
   color: white;
 }
 
-.main-action button:hover {
+.main-action1 button:hover {
   cursor: pointer;
 }

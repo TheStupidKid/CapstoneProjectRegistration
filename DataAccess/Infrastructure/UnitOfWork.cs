@@ -16,7 +16,7 @@ namespace DataAccess.Infrastructure
         private bool disposed = false;
         public IStudentRepository studentRepository { get; private set; }
         public IGenericRepository<Group> groupRepository { get; }
-        public IGenericRepository<Topic> topicRepository { get; }
+        public ITopicRepository topicRepository { get; private set; }
         public ILectureRepository lectureRepository { get; private set; }
         public IGenericRepository<StudentInGroup> studentInGroupRepository { get; }
 
@@ -24,7 +24,7 @@ namespace DataAccess.Infrastructure
 
         public IGenericRepository<StudentInSemester> studentInSemesterRepository { get; }
 
-        public IGenericRepository<TopicOfLecture> topicOfLectureRepository { get; }
+        public ITopicOfLectureRepository topicOfLectureRepository { get; private set; }
 
         public IGenericRepository<TopicOfSemester> topicOfSemesterRepository { get; }
 
@@ -33,12 +33,12 @@ namespace DataAccess.Infrastructure
             _context = context;
             studentRepository = new StudentRepository(_context);
             groupRepository = new GenericRepository<Group>(_context);
-            topicRepository = new GenericRepository<Topic>(_context);
+            topicRepository = new TopicRepository(_context);
             lectureRepository = new LectureRepository(_context);
             studentInGroupRepository = new GenericRepository<StudentInGroup>(_context);
             semesterRepository = new GenericRepository<Semester>(_context);
             studentInSemesterRepository = new GenericRepository<StudentInSemester>(_context);
-            topicOfLectureRepository = new GenericRepository<TopicOfLecture>(_context);
+            topicOfLectureRepository = new TopicOfLectureRepository(_context);
             topicOfSemesterRepository = new GenericRepository<TopicOfSemester>(_context);
         }
         public void Save()

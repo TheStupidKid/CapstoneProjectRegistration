@@ -1,5 +1,6 @@
 ﻿using BussinessObject.Models;
 using DataAccess.Infrastructure;
+using DataAccess.Interface;
 using DataAccess.Service;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -54,6 +55,7 @@ namespace CapstoneProjectRegistrationWeb
                 {
                     options.AccessDeniedPath = "/Home/Denied";
                     options.LoginPath = "/Home/Login";
+                    options.LoginPath = "/Home/Logout";
                 });
             services.AddSession();
         }
@@ -84,7 +86,7 @@ namespace CapstoneProjectRegistrationWeb
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Login}/{id?}");
             });
         }
     }

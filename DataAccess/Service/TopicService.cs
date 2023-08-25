@@ -1,4 +1,5 @@
-﻿using DataAccess.Infrastructure;
+﻿using BussinessObject.Models;
+using DataAccess.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,11 @@ namespace DataAccess.Service
         {
             this.unitOfWork = unitOfWork;
         }
+
+        public IEnumerable<Topic> GetTopics()
+        {
+            return unitOfWork.topicRepository.GetAll();
+        }
+             
     }
 }

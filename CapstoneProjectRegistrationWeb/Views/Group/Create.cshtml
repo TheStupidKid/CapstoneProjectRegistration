@@ -1,0 +1,117 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <link rel="stylesheet" href="../css/create_group.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+          rel="stylesheet" />
+</head>
+
+<body>
+    <div class="header">
+        <img class="logo-header" src="../image/Logo-FU-03.jpeg" alt="" />
+        <div class="header-right">
+            <a class="active" href="student_create_group.html">Home</a>
+            <a asp-controller="Group" asp-action="Create">Create</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </div>
+    <main class="container">
+        <div class="wrapper">
+            <div class="create-box">
+                <h1>Create new group if you don't have one ?</h1>
+                <div class="main-content-wrapper">
+                    <form action="">
+                        <div class="upper-content">
+                            <label for="group">Group name:</label>
+                            <input class="group-name-input"
+                                   type="text"
+                                   placeholder="Input your group name" />
+
+                            <!-- dropdown major-->
+                            <label for="major">Major:</label>
+                            <select class="select-major"
+                                    name="major"
+                                    id="major"
+                                    onchange="toggleOtherField()">
+                                <!-- loop đoạn này thôi -->
+                                <option value="Software Engineer">Software Engineer</option>
+                                <option value="Information Assurance">
+                                    Information Assurance
+                                </option>
+                                <option value="Artificial Intelligence">
+                                    Artificial Intelligence
+                                </option>
+                                <!-- loop đoạn này thôi -->
+
+
+                            </select>
+
+                            <!-- dropdown lecturer -->
+
+                            <label for="lecturer">Lecturer:</label>
+                            <select class="select-lecturer" name="lecturer" id="lecturer">
+                                <option value="Hoang Xuan Quyet">Lâm Hữu Khánh Phương</option>
+                                <option value="Doan Xuan Truong">Nguyễn Ngọc Lâm</option>
+                                <option value="Doan Xuan Truong">Thân Thị Ngọc Vân</option>
+                            </select>
+                            <label for="topic">Topic:</label>
+                            <select class="select-topic" name="topic" id="topic">
+                                <option value="Summer Linen Mark">Booking Hotel Website</option>
+                                <option value="Ballo Linen Mark">Foody</option>
+                            </select>
+
+                            <div class="below-content">
+                                <div class="left-content">
+                                    <label for="nameLeader">Leader name:</label>
+                                    <input type="text" id="nameLeader" name="nameLeader" />
+                                    <label for="name2">Team name 1:</label>
+                                    <input type="text" id="name2" name="name2" />
+                                    <label for="name3">Team name 2:</label>
+                                    <input type="text" id="name3" name="name3" />
+                                    <label for="name4">Team name 3:</label>
+                                    <input type="text" id="name4" name="name4" />
+                                </div>
+                                <div class="right-content">
+                                    <label for="codeLeader">Leader code:</label>
+                                    <input type="text" id="codeLeader" name="codeLeader" />
+                                    <label for="code2">Name2 code:</label>
+                                    <input type="text" id="code2" name="code2" />
+                                    <label for="code3">Name3 code:</label>
+                                    <input type="text" id="code3" name="code3" />
+                                    <label for="code4">Name4 code:</label>
+                                    <input type="text" id="code4" name="code4" />
+                                </div>
+                            </div>
+                            <button class="submit-group-btn" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function toggleOtherField() {
+            var selectedOption = document.getElementById("major").value;
+            var otherField = document.querySelector(".other-field");
+
+            if (selectedOption === "Others") {
+                otherField.style.display = "block";
+            } else {
+                otherField.style.display = "none";
+            }
+        }
+
+        // Call the function initially to ensure correct display state on page load
+        toggleOtherField();
+    </script>
+</body>
+</html>
+

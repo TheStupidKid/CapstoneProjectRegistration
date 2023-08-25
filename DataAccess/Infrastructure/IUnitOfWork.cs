@@ -11,13 +11,13 @@ namespace DataAccess.Infrastructure
     public interface IUnitOfWork : IDisposable
     {
         IStudentRepository studentRepository { get; }
-        IGenericRepository<Topic> topicRepository { get; }
+        ITopicRepository topicRepository { get; }
         ILectureRepository lectureRepository { get; }
         IGenericRepository<Group> groupRepository { get; }
         IGenericRepository<StudentInGroup> studentInGroupRepository { get; }
         IGenericRepository<Semester> semesterRepository { get; }
         IGenericRepository<StudentInSemester> studentInSemesterRepository { get; }
-        IGenericRepository<TopicOfLecture> topicOfLectureRepository { get; }
+        ITopicOfLectureRepository topicOfLectureRepository { get; }
         IGenericRepository<TopicOfSemester> topicOfSemesterRepository { get; }
         void Save();
     }

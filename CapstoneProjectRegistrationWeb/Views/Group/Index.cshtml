@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group</title>
+    <link rel="stylesheet" href="../css/group_information.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+          rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <img class="logo-header" src="../image/Logo-FU-03.jpeg" alt="" />
+        <div class="header-right">
+            <a href="student_create_group.html">Home</a>
+            <a class="active" href="group_information.html">Group</a>
+            <a asp-controller="Home" asp-action="Logout">Logout</a>
+        </div>
+    </div>
+    <main>
+        <div class="wrapper">
+            <h1 class="group-name">AlphaBet group</h1>
+            <div class="main-section">
+                <div class="leader-section">
+                    <h1 style="text-align: center">Leader</h1>
+
+                    <div class="leader-element">
+                        <div class="leader-name">
+                            <span style="color: grey">SE161492</span> <span>-</span>
+                            <span>Trương Tấn Đạt</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-section">
+                    <h1 style="text-align: center">Teammates</h1>
+                    
+                    <div class="team-element">
+                        <div class="team-name">
+                            <span style="color: grey">SE161203</span> <span>-</span>
+                            <span>Phạm Hoàng Huy</span>
+                        </div>
+                    </div>
+                    <div class="team-element">
+                        <div class="team-name">
+                            <span style="color: grey">SE151460</span> <span>-</span>
+                            <span>Phạm Hoàng Trung</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Header.cshtml";
+}
+<main class="container">
+    <div class="main-action">
+        <button class="approve">Create</button>
+    </div>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Topic Name</th>
+                <th>Description</th>
+                <th>Create Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Summer Linen Mark</td>
+                <td>Web app đặt khách sạn</td>
+                <td>25/8/2023</td>
+                <td>
+                    <div class="main-action1">
+                        <button class="approve">Delete</button>
+                        <button class="reject">Update</button>
+                    </div>
+                </td>
+            </tr>
+            <!-- and so on... -->
+        </tbody>
+    </table>
+</main>

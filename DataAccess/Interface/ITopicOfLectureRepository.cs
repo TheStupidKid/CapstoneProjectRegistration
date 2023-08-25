@@ -10,5 +10,6 @@ namespace DataAccess.Interface
 {
     public interface ITopicOfLectureRepository : IGenericRepository<TopicOfLecture>
     {
+        IEnumerable<TopicOfLecture> getByLectureId(int id);
     }
 }

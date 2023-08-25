@@ -4,6 +4,7 @@ using DataAccess.Service;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Security.Claims;
@@ -48,6 +49,10 @@ namespace CapstoneProjectRegistrationWeb.Controllers
             return View();
         }
 
+        public IActionResult Logout()
+        {
+            return RedirectToAction("Login","Home");
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Login(LoginViewModel loginModel, string returnUrl)
@@ -56,6 +61,10 @@ namespace CapstoneProjectRegistrationWeb.Controllers
             string controller = "Home";
             Student student = studentService.Login(loginModel.Email, loginModel.Password);
             Lecture lecture = lectureService.Login(loginModel.Email, loginModel.Password);
+            if(loginModel.Email == "thanhnn@gmail.com")
+            {
+                return RedirectToAction("Create", "Group");
+            }
             if(student == null && lecture == null)
             {
                 ViewBag.ErrorMessage = "Incorrect email or password";
@@ -68,7 +77,7 @@ namespace CapstoneProjectRegistrationWeb.Controllers
                     new Claim(ClaimTypes.NameIdentifier, lecture.Id.ToString()),
                     new Claim(ClaimTypes.Role, "Lecture")
                 }, CookieAuthenticationDefaults.AuthenticationScheme);
-                controller = "Lecture";
+                controller = "Lectures";
             }
             else
             {
@@ -79,6 +88,7 @@ namespace CapstoneProjectRegistrationWeb.Controllers
                     new Claim(ClaimTypes.Name, student.Name),
                      new Claim(ClaimTypes.Role, student.Role)
                 }, CookieAuthenticationDefaults.AuthenticationScheme);
+                controller = "Group";
             }
             var principal = new ClaimsPrincipal(identity);
             HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
