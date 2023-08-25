@@ -17,7 +17,7 @@ namespace DataAccess.Infrastructure
         public IStudentRepository studentRepository { get; private set; }
         public IGenericRepository<Group> groupRepository { get; }
         public IGenericRepository<Topic> topicRepository { get; }
-        public IGenericRepository<Lecture> lectureRepository { get; }
+        public ILectureRepository lectureRepository { get; private set; }
         public IGenericRepository<StudentInGroup> studentInGroupRepository { get; }
 
         public IGenericRepository<Semester> semesterRepository { get; }
@@ -34,7 +34,7 @@ namespace DataAccess.Infrastructure
             studentRepository = new StudentRepository(_context);
             groupRepository = new GenericRepository<Group>(_context);
             topicRepository = new GenericRepository<Topic>(_context);
-            lectureRepository = new GenericRepository<Lecture>(_context);
+            lectureRepository = new LectureRepository(_context);
             studentInGroupRepository = new GenericRepository<StudentInGroup>(_context);
             semesterRepository = new GenericRepository<Semester>(_context);
             studentInSemesterRepository = new GenericRepository<StudentInSemester>(_context);

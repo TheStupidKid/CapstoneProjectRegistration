@@ -12,7 +12,7 @@ namespace DataAccess.Infrastructure
     {
         IStudentRepository studentRepository { get; }
         IGenericRepository<Topic> topicRepository { get; }
-        IGenericRepository<Lecture> lectureRepository { get; }
+        ILectureRepository lectureRepository { get; }
         IGenericRepository<Group> groupRepository { get; }
         IGenericRepository<StudentInGroup> studentInGroupRepository { get; }
         IGenericRepository<Semester> semesterRepository { get; }

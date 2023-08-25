@@ -13,15 +13,19 @@ namespace DataAccess.Repository
 {
     public class LectureRepository : GenericRepository<Lecture>, ILectureRepository
     {
-        private readonly CapstoneRegistrationContext _context;
+        private readonly DbContext _context;
         private readonly DbSet<Lecture> _dbSet;
+        public LectureRepository(DbContext context)
+        {
+            _context = context;
+        }
         public Lecture checkLogin(string email, string password)
         {
-            Lecture lecture = _dbSet.Where(s => s.Email.Equals(email)).FirstOrDefault();
-            if (lecture == null || !BC.Verify(password, lecture.Password))
+            Lecture lecture = _context.Set<Lecture>().FirstOrDefault(e => e.Email == email && e.Password == password);
+            /*if (lecture == null || !BC.Verify(password, lecture.Password))
             {
                 return null;
-            }
+            }*/
 
             return lecture;
         }

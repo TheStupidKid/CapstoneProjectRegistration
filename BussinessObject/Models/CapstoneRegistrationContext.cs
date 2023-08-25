@@ -16,6 +16,7 @@ namespace BussinessObject.Models
         {
         }
 
+        public virtual DbSet<Admin> Admins { get; set; } = null!;
         public virtual DbSet<Group> Groups { get; set; } = null!;
         public virtual DbSet<Lecture> Lectures { get; set; } = null!;
         public virtual DbSet<Semester> Semesters { get; set; } = null!;
@@ -37,6 +38,25 @@ namespace BussinessObject.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Admin>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("Admin");
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Id).ValueGeneratedOnAdd();
+
+                entity.Property(e => e.Password).IsUnicode(false);
+
+                entity.Property(e => e.Role)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<Group>(entity =>
             {
                 entity.ToTable("Group");

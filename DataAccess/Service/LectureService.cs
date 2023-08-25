@@ -1,4 +1,5 @@
-﻿using DataAccess.Infrastructure;
+﻿using BussinessObject.Models;
+using DataAccess.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,10 @@ namespace DataAccess.Service
         public LectureService(IUnitOfWork unitOfWork)
         {
             this.unitOfWork = unitOfWork;
+        }
+        public Lecture Login(string email, string password)
+        {
+            return unitOfWork.lectureRepository.checkLogin(email, password);
         }
     }
 }
